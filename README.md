@@ -1,6 +1,6 @@
-# synthetic_time_series_CLEAN
+# synthetic_time_series_public
 
-`synthetic_time_series_CLEAN` is a clean release repository for medical time-series text modeling. It organizes deterministic data rendering, Mamba causal language model training, vLLM generation, memorization probing, and embedding-based Sliced Wasserstein Distance evaluation into a modular and reusable pipeline.
+`synthetic_time_series_public` is a clean release repository for medical time-series text modeling. It organizes deterministic data rendering, Mamba causal language model training, vLLM generation, memorization probing, and embedding-based Sliced Wasserstein Distance evaluation into a modular and reusable pipeline.
 
 Core pipeline:
 
@@ -15,7 +15,7 @@ MEDS/MIMIC-style time series
 ## Repository Layout
 
 ```text
-synthetic_time_series_CLEAN/
+synthetic_time_series_public/
   configs/
     data/
       mimic_meds.yaml
@@ -39,7 +39,7 @@ synthetic_time_series_CLEAN/
       run_sliced_wd.sh
       EVAL_PPL_WD/
 
-  synthetic_time_series_clean/
+  synthetic_time_series_public/
     common/
     data/
     training/
