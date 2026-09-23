@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "synthetic-time-series-clean"
+version = "2026.08.05"
+description = "Clean modular training, inference, and evaluation pipeline for synthetic time series"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch",
+  "transformers",
+  "accelerate",
+  "polars",
+  "tqdm",
+  "hydra-core",
+  "omegaconf",
+  "numpy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+vllm = ["vllm"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["synthetic_time_series_clean"]

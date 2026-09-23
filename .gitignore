@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Slurm logs
+slurm_logs/
+**/slurm_logs/
+slurm-*.out
+slurm-*.err
+*.out
+*.err
+
+# Generated results / artifacts
+outputs/
+results/
+checkpoints/
+wandb/
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key

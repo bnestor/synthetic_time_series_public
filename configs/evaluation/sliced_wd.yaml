@@ -1,0 +1,18 @@
+sliced_wd:
+  task_type: "synthetic"  # synthetic or memorization
+  embedding_names: "bge_m3"
+  n_projections: 128
+  seed: 42
+  max_rows: null
+  repair_event_text: true
+
+input:
+  manifest: null
+  embedding_manifest: null
+
+runtime:
+  device: "auto"
+
+output:
+  output_root: null
+

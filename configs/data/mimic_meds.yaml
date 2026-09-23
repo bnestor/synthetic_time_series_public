@@ -1,0 +1,19 @@
+data:
+  numerical_normalization: false
+  data_items:
+    - path: ???
+      identifier_column: "subject_id"
+      time_column: "time"
+
+splits:
+  train_dataset: "train"
+  tuning_dataset: "tuning"
+  held_out_dataset: "held_out"
+  id_columns: ["subject_id"]
+
+max_rows: 512
+max_text_length: 16384
+
+sanity:
+  check_split_overlap: true
+

@@ -1,0 +1,51 @@
+model:
+  name: "state-spaces/mamba-130m-hf"
+  load_from_local: false
+  local_path: null
+  local_files_only: false
+  trust_remote_code: true
+
+data:
+  numerical_normalization: false
+  data_items:
+    - path: "/home/bnestor/Documents/data/physionet.org/files/mimiciv/3.1/"
+      identifier_column: "subject_id"
+      time_column: "time"
+
+splits:
+  train_dataset: "train"
+  tuning_dataset: "tuning"
+  held_out_dataset: "held_out"
+  id_columns: ["subject_id"]
+
+max_rows: 512
+max_text_length: 16384
+
+sanity:
+  check_split_overlap: true
+
+training:
+  seed: 42
+  max_train_patients: null
+  max_eval_patients: null
+  resume_from_checkpoint: null
+  trainer_args:
+    output_dir: "/home/bnestor/Documents/ryyrn_synthetic_time_series/outputs"
+    logging_dir: "/home/bnestor/Documents/ryyrn_synthetic_time_series/outputs"
+    num_train_epochs: 1
+    per_device_train_batch_size: 4
+    gradient_accumulation_steps: 8
+    learning_rate: 1.0e-4
+    weight_decay: 0.01
+    warmup_steps: 100
+    logging_steps: 50
+    save_steps: 3000
+    save_total_limit: 3
+    evaluation_strategy: "steps"
+    eval_steps: 3000
+    save_strategy: "steps"
+    per_device_eval_batch_size: 4
+    bf16: true
+    dataloader_num_workers: 0
+    remove_unused_columns: false
+    report_to: "none"
